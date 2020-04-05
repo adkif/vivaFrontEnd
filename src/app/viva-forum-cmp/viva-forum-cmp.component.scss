@@ -1,0 +1,472 @@
+* {
+  font-size: 13px;
+}
+
+.direct-chat.chat-pane-open .direct-chat-contacts {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.direct-chat.timestamp-light .direct-chat-timestamp {
+  color: #30465f;
+}
+
+.direct-chat.timestamp-dark .direct-chat-timestamp {
+  color: #cccccc;
+}
+
+.direct-chat-messages {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+  height: 250px;
+  overflow: auto;
+  padding: 10px;
+}
+
+.direct-chat-msg,
+.direct-chat-text {
+  display: block;
+}
+
+.direct-chat-msg {
+  margin-bottom: 10px;
+}
+
+.direct-chat-msg::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.direct-chat-messages,
+.direct-chat-contacts {
+  transition: -webkit-transform .5s ease-in-out;
+  transition: transform .5s ease-in-out;
+  transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+}
+
+.direct-chat-text {
+  border-radius: 0.3rem;
+  background: #d2d6de;
+  border: 1px solid #d2d6de;
+  color: #444;
+  margin: 5px 0 0 50px;
+  padding: 5px 10px;
+  position: relative;
+}
+
+.direct-chat-text::after, .direct-chat-text::before {
+  border: solid transparent;
+  border-right-color: #d2d6de;
+  content: ' ';
+  height: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 100%;
+  top: 15px;
+  width: 0;
+}
+
+.direct-chat-text::after {
+  border-width: 5px;
+  margin-top: -5px;
+}
+
+.direct-chat-text::before {
+  border-width: 6px;
+  margin-top: -6px;
+}
+
+.right .direct-chat-text {
+  margin-left: 0;
+  margin-right: 50px;
+}
+
+.right .direct-chat-text::after, .right .direct-chat-text::before {
+  border-left-color: #d2d6de;
+  border-right-color: transparent;
+  left: 100%;
+  right: auto;
+}
+
+.direct-chat-img {
+  border-radius: 50%;
+  float: left;
+  height: 40px;
+  width: 40px;
+}
+
+.right .direct-chat-img {
+  float: right;
+}
+
+.direct-chat-infos {
+  display: block;
+  font-size: 0.875rem;
+  margin-bottom: 2px;
+}
+
+.direct-chat-name {
+  font-weight: 600;
+}
+
+.direct-chat-timestamp {
+  color: #697582;
+}
+
+.direct-chat-contacts-open .direct-chat-contacts {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.direct-chat-contacts {
+  -webkit-transform: translate(101%, 0);
+  transform: translate(101%, 0);
+  background: #343a40;
+  bottom: 0;
+  color: #ffffff;
+  height: 250px;
+  overflow: auto;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.direct-chat-contacts-light {
+  background: #f8f9fa;
+}
+
+.direct-chat-contacts-light .contacts-list-name {
+  color: #495057;
+}
+
+.direct-chat-contacts-light .contacts-list-date {
+  color: #6c757d;
+}
+
+.direct-chat-contacts-light .contacts-list-msg {
+  color: #545b62;
+}
+.contacts-list {
+  padding-left: 0;
+  list-style: none;
+}
+
+.contacts-list > li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 0;
+  padding: 10px;
+}
+
+.contacts-list > li::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.contacts-list > li:last-of-type {
+  border-bottom: 0;
+}
+
+.contacts-list-img {
+  border-radius: 50%;
+  float: left;
+  width: 40px;
+}
+
+.contacts-list-info {
+  color: #ffffff;
+  margin-left: 45px;
+}
+
+.contacts-list-name,
+.contacts-list-status {
+  display: block;
+}
+
+.contacts-list-name {
+  font-weight: 600;
+}
+
+.contacts-list-status {
+  font-size: 0.875rem;
+}
+
+.contacts-list-date {
+  color: #ced4da;
+  font-weight: normal;
+}
+
+.contacts-list-msg {
+  color: #b1bbc4;
+}
+
+.direct-chat-primary .right > .direct-chat-text {
+  background: #007bff;
+  border-color: #007bff;
+  color: #ffffff;
+}
+
+.direct-chat-primary .right > .direct-chat-text::after, .direct-chat-primary .right > .direct-chat-text::before {
+  border-left-color: #007bff;
+}
+
+.direct-chat-secondary .right > .direct-chat-text {
+  background: #6c757d;
+  border-color: #6c757d;
+  color: #ffffff;
+}
+
+.direct-chat-secondary .right > .direct-chat-text::after, .direct-chat-secondary .right > .direct-chat-text::before {
+  border-left-color: #6c757d;
+}
+
+.direct-chat-success .right > .direct-chat-text {
+  background: #28a745;
+  border-color: #28a745;
+  color: #ffffff;
+}
+
+.direct-chat-success .right > .direct-chat-text::after, .direct-chat-success .right > .direct-chat-text::before {
+  border-left-color: #28a745;
+}
+
+.direct-chat-info .right > .direct-chat-text {
+  background: #17a2b8;
+  border-color: #17a2b8;
+  color: #ffffff;
+}
+
+.direct-chat-info .right > .direct-chat-text::after, .direct-chat-info .right > .direct-chat-text::before {
+  border-left-color: #17a2b8;
+}
+
+.direct-chat-warning .right > .direct-chat-text {
+  background: #ffc107;
+  border-color: #ffc107;
+  color: #1F2D3D;
+}
+
+.direct-chat-warning .right > .direct-chat-text::after, .direct-chat-warning .right > .direct-chat-text::before {
+  border-left-color: #ffc107;
+}
+
+.direct-chat-danger .right > .direct-chat-text {
+  background: #dc3545;
+  border-color: #dc3545;
+  color: #ffffff;
+}
+
+.direct-chat-danger .right > .direct-chat-text::after, .direct-chat-danger .right > .direct-chat-text::before {
+  border-left-color: #dc3545;
+}
+
+.direct-chat-light .right > .direct-chat-text {
+  background: #f8f9fa;
+  border-color: #f8f9fa;
+  color: #1F2D3D;
+}
+
+.direct-chat-light .right > .direct-chat-text::after, .direct-chat-light .right > .direct-chat-text::before {
+  border-left-color: #f8f9fa;
+}
+
+.direct-chat-dark .right > .direct-chat-text {
+  background: #343a40;
+  border-color: #343a40;
+  color: #ffffff;
+}
+
+.direct-chat-dark .right > .direct-chat-text::after, .direct-chat-dark .right > .direct-chat-text::before {
+  border-left-color: #343a40;
+}
+
+.direct-chat-lightblue .right > .direct-chat-text {
+  background: #3c8dbc;
+  border-color: #3c8dbc;
+  color: #ffffff;
+}
+
+.direct-chat-lightblue .right > .direct-chat-text::after, .direct-chat-lightblue .right > .direct-chat-text::before {
+  border-left-color: #3c8dbc;
+}
+
+.direct-chat-navy .right > .direct-chat-text {
+  background: #001f3f;
+  border-color: #001f3f;
+  color: #ffffff;
+}
+
+.direct-chat-navy .right > .direct-chat-text::after, .direct-chat-navy .right > .direct-chat-text::before {
+  border-left-color: #001f3f;
+}
+
+.direct-chat-olive .right > .direct-chat-text {
+  background: #3d9970;
+  border-color: #3d9970;
+  color: #ffffff;
+}
+
+.direct-chat-olive .right > .direct-chat-text::after, .direct-chat-olive .right > .direct-chat-text::before {
+  border-left-color: #3d9970;
+}
+
+.direct-chat-lime .right > .direct-chat-text {
+  background: #01ff70;
+  border-color: #01ff70;
+  color: #1F2D3D;
+}
+
+.direct-chat-lime .right > .direct-chat-text::after, .direct-chat-lime .right > .direct-chat-text::before {
+  border-left-color: #01ff70;
+}
+
+.direct-chat-fuchsia .right > .direct-chat-text {
+  background: #f012be;
+  border-color: #f012be;
+  color: #ffffff;
+}
+
+.direct-chat-fuchsia .right > .direct-chat-text::after, .direct-chat-fuchsia .right > .direct-chat-text::before {
+  border-left-color: #f012be;
+}
+
+.direct-chat-maroon .right > .direct-chat-text {
+  background: #d81b60;
+  border-color: #d81b60;
+  color: #ffffff;
+}
+
+.direct-chat-maroon .right > .direct-chat-text::after, .direct-chat-maroon .right > .direct-chat-text::before {
+  border-left-color: #d81b60;
+}
+
+.direct-chat-blue .right > .direct-chat-text {
+  background: #007bff;
+  border-color: #007bff;
+  color: #ffffff;
+}
+
+.direct-chat-blue .right > .direct-chat-text::after, .direct-chat-blue .right > .direct-chat-text::before {
+  border-left-color: #007bff;
+}
+
+.direct-chat-indigo .right > .direct-chat-text {
+  background: #6610f2;
+  border-color: #6610f2;
+  color: #ffffff;
+}
+
+.direct-chat-indigo .right > .direct-chat-text::after, .direct-chat-indigo .right > .direct-chat-text::before {
+  border-left-color: #6610f2;
+}
+
+.direct-chat-purple .right > .direct-chat-text {
+  background: #6f42c1;
+  border-color: #6f42c1;
+  color: #ffffff;
+}
+
+.direct-chat-purple .right > .direct-chat-text::after, .direct-chat-purple .right > .direct-chat-text::before {
+  border-left-color: #6f42c1;
+}
+
+.direct-chat-pink .right > .direct-chat-text {
+  background: #e83e8c;
+  border-color: #e83e8c;
+  color: #ffffff;
+}
+
+.direct-chat-pink .right > .direct-chat-text::after, .direct-chat-pink .right > .direct-chat-text::before {
+  border-left-color: #e83e8c;
+}
+
+.direct-chat-red .right > .direct-chat-text {
+  background: #dc3545;
+  border-color: #dc3545;
+  color: #ffffff;
+}
+
+.direct-chat-red .right > .direct-chat-text::after, .direct-chat-red .right > .direct-chat-text::before {
+  border-left-color: #dc3545;
+}
+
+.direct-chat-orange .right > .direct-chat-text {
+  background: #fd7e14;
+  border-color: #fd7e14;
+  color: #1F2D3D;
+}
+
+.direct-chat-orange .right > .direct-chat-text::after, .direct-chat-orange .right > .direct-chat-text::before {
+  border-left-color: #fd7e14;
+}
+
+.direct-chat-yellow .right > .direct-chat-text {
+  background: #ffc107;
+  border-color: #ffc107;
+  color: #1F2D3D;
+}
+
+.direct-chat-yellow .right > .direct-chat-text::after, .direct-chat-yellow .right > .direct-chat-text::before {
+  border-left-color: #ffc107;
+}
+
+.direct-chat-green .right > .direct-chat-text {
+  background: #28a745;
+  border-color: #28a745;
+  color: #ffffff;
+}
+
+.direct-chat-green .right > .direct-chat-text::after, .direct-chat-green .right > .direct-chat-text::before {
+  border-left-color: #28a745;
+}
+
+.direct-chat-teal .right > .direct-chat-text {
+  background: #20c997;
+  border-color: #20c997;
+  color: #ffffff;
+}
+
+.direct-chat-teal .right > .direct-chat-text::after, .direct-chat-teal .right > .direct-chat-text::before {
+  border-left-color: #20c997;
+}
+
+.direct-chat-cyan .right > .direct-chat-text {
+  background: #17a2b8;
+  border-color: #17a2b8;
+  color: #ffffff;
+}
+
+.direct-chat-cyan .right > .direct-chat-text::after, .direct-chat-cyan .right > .direct-chat-text::before {
+  border-left-color: #17a2b8;
+}
+
+.direct-chat-white .right > .direct-chat-text {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #1F2D3D;
+}
+
+.direct-chat-white .right > .direct-chat-text::after, .direct-chat-white .right > .direct-chat-text::before {
+  border-left-color: #ffffff;
+}
+
+.direct-chat-gray .right > .direct-chat-text {
+  background: #6c757d;
+  border-color: #6c757d;
+  color: #ffffff;
+}
+
+.direct-chat-gray .right > .direct-chat-text::after, .direct-chat-gray .right > .direct-chat-text::before {
+  border-left-color: #6c757d;
+}
+
+.direct-chat-gray-dark .right > .direct-chat-text {
+  background: #343a40;
+  border-color: #343a40;
+  color: #ffffff;
+}
+
+.direct-chat-gray-dark .right > .direct-chat-text::after, .direct-chat-gray-dark .right > .direct-chat-text::before {
+  border-left-color: #343a40;
+}

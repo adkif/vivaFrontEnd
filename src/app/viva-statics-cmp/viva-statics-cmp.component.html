@@ -1,0 +1,24 @@
+<main>
+  <section class="about p-0 section-bg">
+    <div class="container">
+      <div class="col-lg pb-2">
+        <div class="section-title pt-lg-3">
+          <h4>Statistiques <b>COVID -19</b> en R.D.C</h4>
+          <h6 class="pb-2">ces informations sont mis à jours toutes les 45 minutes</h6>
+        </div>
+        <app-viva-chart-cmp></app-viva-chart-cmp>
+      </div>
+      <div class="row">
+<!--                      <div class="col-xl col-lg">-->
+<!--                        <agm-map [latitude]="latitude" [longitude]="longitude" (mapClick)="onChoseLocation($event)">-->
+<!--                          <agm-marker [latitude]="latitude" [longitude]="longitude" *ngIf="choseLocation"></agm-marker>-->
+<!--                        </agm-map>-->
+<!--                      </div>-->
+        <div class="col-xl col-lg cdm mt-5" data-aos="fade-up">
+          <app-viva-drc-map-cmp></app-viva-drc-map-cmp>
+          <!--<app-viva-map-cmp></app-viva-map-cmp>-->
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

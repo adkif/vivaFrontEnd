@@ -1,0 +1,297 @@
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+  <div class="container" data-aos="fade-in">
+    <h1>Stop Covid-19 / R.D.C <span class="badge badge-light text-danger p-2"></span></h1>
+    <h4 class="text-white">On peut vaincre le <span class="text-danger">covid-19</span> ensembles. C'est possible en restant attentif aux règles d'hygienne, et l'éspoir peut trouver vie dans notre pays</h4>
+    <div class="d-flex align-items-center mb-2 mb-sm-4 mb-md-4">
+      <i class="bx bxs-right-arrow-alt get-started-icon"></i>
+      <a routerLink="/case-statistics-route" class="btn-get-started scrollto nav-link">Voir les statistiques</a>
+    </div>
+  </div>
+</section><!-- End Hero -->
+<main id="main">
+  <!-- ======= Why Us Section ======= -->
+  <section id="why-us" class="why-us mt-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-4 col-lg-5" data-aos="fade-up">
+          <div class="content">
+            <h3 class="pb-5">Quelles mesures prendre ?</h3>
+            <div class="text-center mt-5">
+              <a href="#values-1" class="more-btn nav-link">Comment se protéger ? <i class="bx bx-chevron-right"></i></a>
+            </div>
+            <div class="text-center mt-3 pb-5">
+              <a href="#values-2" class="more-btn nav-link">Pense-vous être malade ?<i class="bx bx-chevron-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-8 col-lg-7 d-flex">
+          <div class="icon-boxes d-flex flex-column justify-content-center">
+            <div class="row">
+              <div class="col-xl-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                <div class="icon-box mt-4 mt-xl-0">
+                  <i class="bx bxs-bug text-danger"></i>
+                  <h4>Cas confirmés</h4>
+                  <h2>{{ staitics.confirmed }}</h2>
+                  <p><small class="badge badge-light">mis à jour</small></p>
+                  <p> <small>{{today | date:'medium'}}</small> </p>
+                </div>
+              </div>
+
+              <div class="col-xl-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+                <div class="icon-box mt-4 mt-xl-0">
+                  <i class="bx bxs-heart text-success "></i>
+                  <h4>Cas guérit</h4>
+                  <h2>{{ staitics.recovered }}</h2>
+                  <p><small class="badge badge-light">mis à jour</small></p>
+                  <p> <small>{{today | date:'medium'}}</small> </p>
+                </div>
+              </div>
+              <div class="col-xl-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon-box mt-4 mt-xl-0">
+                  <i class="bx bxs-bed"></i>
+                  <h4>Cas de Decès</h4>
+                  <h2>{{ staitics.death }}</h2>
+                  <p><small class="badge badge-light">mis à jour</small></p>
+                  <p> <small>{{today | date:'medium'}}</small> </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- End Why Us Section -->
+  <section id="services" class="services section-bg">
+    <div class="container">
+
+      <div class="section-title" data-aos="fade-up">
+        <h2>Actualités</h2>
+        <p>Retrouver Toutes les informations concernant corona virus en RDC en temps réel</p>
+      </div>
+
+      <div class="row">
+        <div class="container">
+          <div class="col-lg-4 col-md-6 vm" data-aos="fade-up">
+            <div class="icon-box mgn-none">
+              <object data="https://www.youtube.com/embed/R_178EKiGuU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></object>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 vm" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon-box mgn-none">
+              <object data="https://www.youtube.com/embed/TduuPDHGmtM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></object>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 vm" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box mgn-none">
+              <object data="https://www.youtube.com/embed/i5RHa3QjJq4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></object>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 vm" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon-box mgn-none">
+              <object data="https://www.youtube.com/embed/R_178EKiGuU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></object>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- End Services Section -->
+  <!-- ======= Values Section ======= -->
+  <section id="values-1" class="values ">
+    <div class="container">
+      <div class="row">
+        <div class="container">
+          <div class="section-title">
+            <h2 data-aos="fade-up">Comment se protéger ?</h2>
+            <!--            <p data-aos="fade-up">&nbsp;</p>-->
+          </div>
+          <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title pb-2"><span><img src="../assets/img/handwash.png" alt=""></span>&nbsp;Lavez vos mains regulièrement</h4>
+                <p class="card-text">
+                  <b>Lavez-vous souvent les mains</b>&nbsp;
+                  à l'eau et au savon pendant au moins 20 secondes, surtout après avoir été dans un lieu public, ou après vous être mouché, tousser ou éternuer.
+                </p>
+                <p class="card-text pt-2">
+                  Si le<b> savon </b> et <b>l'eau</b> ne sont pas facilement disponibles, utilisez un<b> désinfectant </b>pour les mains contenant au moins 60% d'alcool . Couvrez toutes les surfaces de vos mains et frottez-les ensemble jusqu'à ce qu'elles soient <b>sèches</b>
+                </p>
+                <p class="card-text pt-2">
+                  Évitez de toucher vos yeux, votre nez et votre <b>bouche</b>avec <b>des mains non lavées</b>.
+                </p>
+                <!--              <div class="read-more"><a href="#"><i class="icofont-arrow-right"></i> Read More</a></div>-->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title pb-2"><span><img src="../assets/img/quarantain.png" alt=""></span>&nbsp;Évitez les contacts approchés</h4>
+                <p class="card-text">
+                  Évitez les contacts étroits avec les<b> personnes malades</b>
+                </p>
+                <p class="card-text pt-2">
+                  Mettez-vous à distance avec d'autres personnes si <span class="badge badge-danger">Covid-19</span> se répand dans votre communauté. Ceci est particulièrement important pour les personnes qui courent un risque plus élevé de tomber très malade .
+                </p>
+                <p class="card-text pt-2">
+                  Évitez de toucher vos yeux, votre nez et votre <b>bouche</b> avec <b>des mains non lavées</b>.
+                </p>
+                <!--              <div class="read-more"><a href="#"><i class="icofont-arrow-right"></i> Read More</a></div>-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- End Values Section -->
+  <section id="values-2" class="values section-bg">
+    <div class="container">
+      <div class="row">
+        <div class="container">
+          <div class="section-title">
+            <h2 data-aos="fade-up">Pensez-vous être malade ?</h2>
+            <p data-aos="fade-up">Prenez des mesures pour protéger les autres | </p>
+              <p><a class="btn btn-default mt-3" routerLink="/case-testing-route">Je vais passer un test</a></p>
+              <p><a class="btn btn-default mt-3" href="#values-3">quoi faire si vous êtes malade .</a></p>
+          </div>
+          <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title pb-2"><span><img src="../assets/img/covernos.png" alt=""></span>&nbsp;Couvrir la toux et les éternuements</h4>
+                <p class="card-text">
+                  <b>Couvrez-vous la bouche et le nez</b> avec un mouchoir lorsque vous toussez ou éternuez ou utilisez l'intérieur de votre coude.
+                </p>
+                <p class="card-text pt-2">
+                  Jetez les <b>mouchoirs</b> usagés à la poubelle.
+                </p>
+                <p class="card-text pt-2">
+                  <b> Lavez-vous</b> immédiatement <b>les mains</b> à l'eau et au savon pendant au moins 20 secondes.
+                  Si le savon et l'eau ne sont pas facilement disponibles,
+                  nettoyez-vous les mains avec un désinfectant pour les mains contenant au moins 60% d'alcool
+                </p>
+                <!--              <div class="read-more"><a href="#"><i class="icofont-arrow-right"></i> Read More</a></div>-->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title pb-2"><span><img src="../assets/img/stayhome.png" alt=""></span>&nbsp;Restez à la maison si vous êtes malade</h4>
+                <p class="card-text">
+                  Restez à la maison si vous êtes malade, sauf pour obtenir des soins médicaux.
+                  <a class="btn btn-default" href="#values-3"> Apprenez quoi faire si vous êtes malade </a>.
+                </p>
+                <!--              <div class="read-more"><a href="#"><i class="icofont-arrow-right"></i> Read More</a></div>-->
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End Values Section -->
+  <!-- ======= Team Section ======= -->
+  <section id="values-3" class="team section-bg">
+    <div class="container">
+
+      <div class="row">
+        <div class="container">
+          <div class="section-title">
+            <h2 data-aos="fade-up">Qu'est faire lorsqu on est malade</h2>
+            <p data-aos="fade-up">Prenez des mesures pour protéger les autres </p>
+          </div>
+          <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="card border mgn-none">
+              <div class="card-body">
+                <h4 class="card-title pb-2"><span><img src="../assets/img/separete.png" alt=""></span>&nbsp;Séparez-vous des autres personnes de votre maison, c'est ce qu'on appelle l'isolement de la maison</h4>
+                <p class="card-text">
+                  <b>Restez à l'écart des autres:</b> autant que possible, vous restez à l'écart des autres.
+                  Vous devriez rester dans une «chambre de malade» spécifique si possible et loin des
+                  autres personnes de votre maison. Utilisez une salle de bain séparée, si disponible.
+                </p>
+                <p class="card-text pt-2">
+                  <button routerLink="/case-of-bel-route" class="btn btn-default">Si quelqu'un de chez vous est malade</button>
+                </p>
+                <!--              <div class="read-more"><a href="#"><i class="icofont-arrow-right"></i> Read More</a></div>-->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="card border mgn-none">
+              <div class="card-body">
+                <h4 class="card-title pb-2"><span><img src="../assets/img/calldoctor.png" alt=""></span>&nbsp;Appelez à l'avance avant de consulter votre médecin</h4>
+                <p class="card-text">
+                  <b>Appelez à l'avance</b>: de nombreuses visites médicales pour des soins de routine sont reportées ou effectuées par téléphone ou télémédecine.
+                </p>
+                <p class="card-text pt-2">
+                  Si vous avez <b>un rendez-vous médical</b> qui ne peut pas être reporté,
+                  appelez le bureau de votre médecin et dites-lui que vous avez ou pourriez avoir COVID-19.
+                  Cela aidera le bureau à se protéger et à protéger les autres patients.
+                </p>
+                <!--              <div class="read-more"><a href="#"><i class="icofont-arrow-right"></i> Read More</a></div>-->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="card border mgn-none">
+              <div class="card-body">
+                <h4 class="card-title pb-2"><span><img src="../assets/img/covernoses.png" alt=""></span>&nbsp;Si vous êtes malade, portez un masque facial dans les situations suivantes, le cas échéant.</h4>
+                <p class="card-text">
+                  <b>Si vous êtes malade</b>: vous devez porter un masque facial, si disponible,
+                  lorsque vous êtes autour d'autres personnes (y compris avant d'entrer dans le bureau d'un professionnel de la santé).
+                </p>
+                <p class="card-text pt-2">
+                  <b>Si vous prenez soin des autres</b>: Si la personne malade n'est pas en mesure de porter un masque facial (par exemple,
+                  car cela lui cause des difficultés à respirer), alors en tant que soignant, vous devez porter un masque facial dans la même pièce que celle-ci.
+                  Les visiteurs, autres que les soignants, ne sont pas recommandés.
+                </p>
+                <p class="card-text pt-2">
+                  <span class="badge badge-danger bg-danger"> Remarque</span> : Lors d'une urgence de santé publique, les masques faciaux peuvent être réservés aux travailleurs de la santé.
+                  Vous devrez peut-être improviser un masque facial à l'aide d'un foulard ou d'un bandana.
+                </p>
+                <!--              <div class="read-more"><a href="#"><i class="icofont-arrow-right"></i> Read More</a></div>-->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex align-items-stretch cd" data-aos="fade-up">
+            <div class="card border mgn-none">
+              <div class="card-body">
+                <h4 class="card-title pb-2"><span><img src="../assets/img/donotshare.png" alt=""></span>&nbsp;Évitez de partager des articles ménagers personnels</h4>
+                <p class="card-text">
+                  <b>Ne pas partager</b>: Ne partagez pas la vaisselle, les verres, les tasses, les ustensiles de cuisine,
+                  les serviettes ou la literie avec d'autres personnes dans votre maison.
+                </p>
+                <p class="card-text pt-2">
+                  <b>Laver soigneusement après utilisation</b>: Après avoir utilisé ces articles,
+                  les laver soigneusement avec de l'eau et du savon ou les mettre au lave-vaisselle.
+                </p>
+                <!--              <div class="read-more"><a href="#"><i class="icofont-arrow-right"></i> Read More</a></div>-->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="card border mgn-none">
+              <div class="card-body">
+                <h4 class="card-title pb-2"><span><img src="../assets/img/stayhome.png" alt=""></span>&nbsp;Rester à la maison sauf pour obtenir des soins médicaux</h4>
+                <p class="card-text">
+                  <b>Restez à la maison:</b> La plupart des personnes atteintes de COVID-19 ont une maladie bénigne et peuvent se rétablir à domicile sans soins médicaux.
+                  Ne quittez pas votre domicile, sauf pour obtenir des soins médicaux. Ne visitez pas les espaces publics.
+                </p>
+                <p class="card-text">
+                  <b>Restez en contact avec votre médecin </b>. Appelez avant de recevoir des soins médicaux. Assurez-vous de recevoir des soins si vous avez de la difficulté à respirer,
+                  si vous avez d'autres signes d'avertissement d'urgence ou si vous pensez qu'il s'agit d'une urgence .
+                </p>
+                <p class="card-text">
+                  <b>Évitez les transports en commun</b>: évitez d'utiliser les transports en commun, le covoiturage ou les taxis.
+                </p>
+                <!--              <div class="read-more"><a href="#"><i class="icofont-arrow-right"></i> Read More</a></div>-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End Team Section -->
+</main>

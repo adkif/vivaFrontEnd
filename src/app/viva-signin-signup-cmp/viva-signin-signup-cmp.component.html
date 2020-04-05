@@ -1,0 +1,137 @@
+<div class="container pb-5">
+ <div class="container pt-lg-5 pb-3 justify-content-center cdf col-lg-12 overflow-hidden">
+<!--    <div class="container justify-content-center bg-primary">-->
+      <div class="card border-0 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card-tools">
+          <ul class="nav nav-pills ml-auto float-right">
+            <li class="nav-item">
+              <a class="nav-link active" href="#router-sgnIn" data-toggle="tab">Connexion</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#router-sgnUp" data-toggle="tab">Crée un compte</a>
+            </li>
+          </ul>
+        </div>
+        <!--    </div>&lt;!&ndash; /.card-header &ndash;&gt;-->
+        <div class="card-body col-lg justify-content-center">
+          <div class="col-lg-8 col-md-10 col-xs-12 col-sm tab-content p-0">
+            <div class="container-fluid chart tab-pane active" id="router-sgnIn" data-aos="fade-in">
+              <div class="container col-lg">
+                <div class="col-lg pb-4">
+                  <h3>Connexion</h3>
+                  <h6>Connectez vous pour beneficier de toutes les fonctionnalités</h6>
+                </div>
+<!--                <div class="col-lg">-->
+                  <form class="col-lg" #signInForm="ngForm" (ngSubmit)="onSignInUser(signInForm)">
+                    <div class="form-group">
+                      <label for="uaddnail">Adresse mail ou Téléphone <span>*</span></label>
+                      <input type="text" name="ucaddmail" id="uaddnail" class="form-control" ngModel required>
+                    </div>
+                    <div class="form-group">
+                      <label for="ucpassword">Mot de passe <span>*</span></label>
+                      <input type="password" name="ucpassword" id="ucpassword" class="form-control" ngModel required>
+                    </div>
+                    <b [hidden]="!error" class="text-danger mb-3"><span class="fa fa-warning"></span>&nbsp;Désolé mot de passe ou nom d'utilisateur incorecte</b>
+                    <div class="form-group pt-4">
+                      <div class="btn-group w-100">
+                        <button type="submit" class="btn btn-primary w-100">Valider</button>
+                        <!--                      <button class="btn btn-default w-25">Annuler</button>-->
+                      </div>
+                    </div>
+                  </form>
+<!--                </div>-->
+              </div>
+            </div>
+            <div class="container-fluid chart tab-pane" id="router-sgnUp" data-aos="fade-in">
+              <div class="container col-lg">
+                <div class="col-lg pb-4">
+                  <h3>Créer un compte</h3>
+                  <h6>Créer un compte et pour rester toujours informer</h6>
+                </div>
+                <form class="col-lg" #signUpForm="ngForm" (ngSubmit)="onSignUpForUser(signUpForm)">
+                  <div class="form-group">
+                    <label for="uname">Nom <span>*</span></label>
+                    <input type="text" name="uname" id="uname" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <label for="upostnom">Postnom <span>*</span></label>
+                    <input type="text" name="upostnom" id="upostnom" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <label for="uprenom">Prenom <span>*</span></label>
+                    <input type="text" name="uprenom" id="uprenom" class="form-control">
+                  </div>
+                  <div class="form-group">
+                  </div>
+                  <div class="form-group d-inline cad mb-3">
+                    <label class="w-100">Genre</label>
+                    <!--                    -->
+                    <label for="ugengerH" class="ml-5 pr-2">Masculin</label>
+                    <input type="radio" name="ugender" id="ugengerH">
+                    <!--                    -->
+                    <label for="ugengerF" class="pr-2 text-left ml-5">Feminen</label>
+                    <input type="radio" name="ugender" id="ugengerF">
+                  </div>
+                  <div class="form-group">
+                    <label for="uphone">Téléphone <span>*</span></label>
+                    <input type="text" name="uphone" id="uphone" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <label for="umail">Adresse mail</label>
+                    <input type="text" name="umail" id="umail" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <label for="uprvnc">Province</label>
+                    <select class="form-control select" id="uprvnc">
+                      <option value="none">Sélectioner une pronvince</option>
+                      <option value="kns">Kinshasa</option>
+                      <option value="kngc">Kongo-Central</option>
+                      <option value="mndb">Maï-Ndombe</option>
+                      <option value="kwg">Kwango</option>
+                      <option value="nk">Nord-Kivu</option>
+                      <option value="sk">Sud-Kivu</option>
+                      <option value="sub">Sud-Ubangi</option>
+                      <option value="nub">Nord-Ubangi</option>
+                      <option value="mgla">Mongala</option>
+                      <option value="tsp">Tshuapa</option>
+                      <option value="kso">Kasaï-Oriental</option>
+                      <option value="hktg">Haut-Katanga</option>
+                      <option value="mnma">Maniema</option>
+                      <option value="skru">Sankuru</option>
+                      <option value="ksc">Kasaï-Central</option>
+                      <option value="lmm">Lomami</option>
+                      <option value="kwl">Kwilu</option>
+                      <option value="it">Ituri</option>
+                      <option value="ks">Kasaï</option>
+                      <option value="lul">Lualaba</option>
+                      <option value="tsp">Tshuapa</option>
+                      <option value="bu">Bas-Uele</option>
+                      <option value="hu">Haut-Uele</option>
+                      <option value="tsp">Tshopo</option>
+                      <option value="hkg">Haut-Katanga</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="uvllersdc">Ville de résidence</label>
+                    <input type="text" name="uvllersdc" id="uvllersdc" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <input type="checkbox" name="privancy" id="privancy" class="custom-checkbox">
+                    <label for="privancy" class="pl-2">J'ai lu et compris les conditions d'utilisation</label>
+                  </div>
+                  <div class="form-group">
+                    <div class="btn-group w-100">
+                      <button type="submit" class="btn btn-primary w-75">Valider</button>
+                      <button class="btn btn-default w-25">Annuler</button>
+                    </div>
+                  </div>
+                </form>
+<!--                <a class="nav-link active" href="#revenue-chart" data-toggle="tab">Area</a>-->
+              </div>
+            </div>
+          </div>
+        </div><!-- /.card-body -->
+<!--      </div>-->
+    </div>
+ </div>
+</div>
