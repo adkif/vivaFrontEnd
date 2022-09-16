@@ -23,7 +23,7 @@
     "@angular/platform-browser-dynamic": "~9.1.0",
     "@angular/router": "~9.1.0",
     "@fortawesome/angular-fontawesome": "^0.6.0",
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^3.4.1",
     "chart.js": "^2.9.3",
     "font-awesome": "^4.7.0",
     "leaflet": "^1.6.0",
